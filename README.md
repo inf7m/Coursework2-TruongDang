@@ -1,32 +1,54 @@
-# Image Processing Parallel Project
+# Image Processing Project
 
 ## Overview
+This project demonstrates image processing using both **sequential** and **parallel** approaches.  
+It loads images from an input folder, processes them (resize, grayscale, blur), and saves the results to an output folder.
 
-This project demonstrates the performance difference between **sequential and parallel computing** using an image processing workload.
+The project is designed to compare performance between normal execution and parallel processing.
 
-The program processes a large number of images by applying several transformations:
-
-- Convert image to **grayscale**
-- Apply **Gaussian blur**
-- Perform **edge detection**
-
-Two implementations are provided:
-
-- **Sequential version** – processes images one by one using a single CPU core.
-- **Parallel version** – distributes image processing tasks across multiple CPU processes.
-
-Since each image can be processed independently, the workload is **embarrassingly parallel**, making it ideal for multiprocessing.
-
----
-
-# Project Structure
-project/
+## Project Structure
+```
+project
 │
-├── config.py # Configuration settings
-├── generate_images.py # Script to generate dataset
-├── image_utils.py # Core image processing logic
-├── sequential.py # Sequential execution
-├── parallel.py # Parallel execution
+├── config.py
+├── generate_images.py
+├── image_utils.py
+├── sequential.py
+├── parallel.py
 │
-├── input_images/ # Generated dataset
-└── output_images/ # Processed images
+├── input_images/
+└── output_images/
+```
+
+## Main Libraries Used
+- **Pillow (PIL)** – image loading and processing  
+- **NumPy** – image array manipulation  
+- **Multiprocessing** – parallel execution  
+- **Time** – performance measurement  
+
+## How to Run
+
+### 1. Install dependencies
+```
+pip install pillow numpy
+```
+
+### 2. Generate sample images (optional)
+```
+python generate_images.py
+```
+
+### 3. Run sequential processing
+```
+python sequential.py
+```
+
+### 4. Run parallel processing
+```
+python parallel.py
+```
+
+Processed images will be saved in the `output_images/` folder.
+
+## Goal
+Compare execution time between sequential and parallel processing when handling multiple images.
