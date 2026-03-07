@@ -35,7 +35,7 @@ pip install pillow numpy
 
 ### 2. Generate sample images (optional)
 ```
-python generate_images.py
+python generate_images.py <number_of_image> <width> <height>
 ```
 
 ### 3. Run sequential processing
