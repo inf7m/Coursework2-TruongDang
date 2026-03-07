@@ -22,7 +22,6 @@ project
 
 ## Main Libraries Used
 - **Pillow (PIL)** – image loading and processing  
-- **NumPy** – image array manipulation  
 - **Multiprocessing** – parallel execution  
 - **Time** – performance measurement  
 
